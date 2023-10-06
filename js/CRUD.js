@@ -62,5 +62,11 @@ export class CRUD{
         return true;
     }
 
-    
+    delete(id){
+        this.#checkThatElementExistsWithId(id);
+        this.#data.splice(id,1);
+        this.#save();
+        return true;
+    }
+
  }
