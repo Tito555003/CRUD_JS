@@ -46,5 +46,14 @@ export class CRUD{
         return this.#data.length;
     }
 
+    read(id){
+        this.#checkThatElementExistsWithId(id);
+        return this.#data[id];
+    }
+
+    readAll(){
+        return this.#data;
+    }
+   
     
  }
